@@ -373,7 +373,7 @@ main {
   z-index: -1;
 }
 
-.info_more-btn:hover,
+.info_more-btn:hover
  { transform: scale(1.05); }
 
 /* .info_more-btn:hover::before,
