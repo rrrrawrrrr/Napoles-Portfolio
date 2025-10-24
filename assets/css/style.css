@@ -868,6 +868,40 @@ main {
   border-radius: inherit;
 }
 
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(black);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.tool-item img {
+  /* filter: brightness(0) invert(1); */
+  transition: transform 0.2s ease;
+}
+
+.tool-item:hover {
+  background-color: var(--onyx);
+  transform: translateY(-2px);
+}
+
+.tool-item:hover img {
+  transform: scale(1.1);
+}
+
 
 
 
