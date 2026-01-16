@@ -55,6 +55,7 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
+
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
@@ -156,4 +157,27 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+
+  // project image modal
+const projectBtns = document.querySelectorAll("[data-project-preview]");
+const projectModal = document.querySelector("[data-project-modal]");
+const projectModalImg = document.querySelector("[data-project-modal-img]");
+const projectClose = document.querySelector("[data-project-close]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+
+const toggleProjectModal = () => {
+  projectModal.classList.toggle("active");
+  projectOverlay.classList.toggle("active");
+};
+
+projectBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    projectModalImg.src = btn.dataset.fullImg;
+    toggleProjectModal();
+  });
+});
+
+projectClose.addEventListener("click", toggleProjectModal);
+projectOverlay.addEventListener("click", toggleProjectModal);
+
 }
